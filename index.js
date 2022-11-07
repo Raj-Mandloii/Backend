@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/user", userController)
-// app.use(authentication)
+app.use(authentication)
 app.use("/admin", ticketController)
 
 app.listen(PORT, async () => {
