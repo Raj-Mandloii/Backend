@@ -4,9 +4,13 @@ const {userController} = require("./routes/user.routes")
 const {ticketController} = require("./routes/ticket.routes")
 const {connection} = require("./config/db")
 const {authentication} = require("./middlewares/authentication")
+const compression = require("compression");
+const helmet = require("helmet");
 
 const app = express();
 const PORT = 8080
+app.use(compression()); 
+app.use(helmet());
 
 app.use(express.json())
 
