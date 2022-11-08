@@ -34,6 +34,20 @@ const questionSchema = new mongoose.Schema({
 
 const QuestionModel = mongoose.model("question", questionSchema)
 
+const jobSchema = new mongoose.Schema({
+    company : {type : String, required : true},
+    city : {type : String, required : true},
+    location : {type : String, required : true},
+    postedAt : {type : String, required : true},
+    role : {type : String, required : true},
+    level : {type : String, required : true},
+    language : {type : String, required : true},
+    contract : {type : String, required : true},
+    // userId : {type : String, required : true}
+})
+
+const JobModel = mongoose.model("job", jobSchema)
+
 module.exports = {
-    TicketModel,BookmarkModel,QuestionModel
+    TicketModel,BookmarkModel,QuestionModel,JobModel
 }
